@@ -62,7 +62,7 @@ intraHTML(
 );
 ```
 
-## Demo03: Use array in JSX ([source](https://github.com/rndme/react-demos/blob/master/demo03/index.html))  ([live](http://danml.com/vcc/react-demos/demo03/))
+## Demo03: Use array in HTML ([source](https://github.com/rndme/react-demos/blob/master/demo03/index.html))  ([live](http://danml.com/vcc/react-demos/demo03/))
 
 If a JavaScript variable is array, VCC will NOT implicitly concat all members of the array, so use `join("")` to view arrays:
 
