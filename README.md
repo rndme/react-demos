@@ -29,7 +29,7 @@ Then play with the source files in the repo's demo(n) directories.
 
 ---
 
-## Demo01: Render HTML ([source](https://github.com/rndme/react-demos/blob/master/demo01/index.html))
+## Demo01: Render HTML ([source](https://github.com/rndme/react-demos/blob/master/demo01/index.html)) ([live](http://danml.com/vcc/react-demos/demo01/))
 
 The template syntax in VCC is called HTML, as in regular HTML5. Use ES6 template literals to contain pretty (un-escaped) multi-line HTML in JS files.
 If you want backwards compatibility with non-ES6 browsers, use something like babel to transform your source into ES5.
@@ -43,7 +43,7 @@ intraHTML(
 );
 ```
 
-## Demo02: Use JavaScript in HTML ([source](https://github.com/rndme/react-demos/blob/master/demo02/index.html))
+## Demo02: Use JavaScript in HTML ([source](https://github.com/rndme/react-demos/blob/master/demo02/index.html)) ([live](http://danml.com/vcc/react-demos/demo02/))
 
 You could also use JavaScript in HTML. It takes angle brackets (&lt;) as the beginning of HTML syntax, and money curly brackets (${) as the beginning of JavaScript syntax.
 
@@ -62,7 +62,7 @@ intraHTML(
 );
 ```
 
-## Demo03: Use array in JSX ([source](https://github.com/rndme/react-demos/blob/master/demo03/index.html))
+## Demo03: Use array in JSX ([source](https://github.com/rndme/react-demos/blob/master/demo03/index.html))  ([live](http://danml.com/vcc/react-demos/demo03/))
 
 If a JavaScript variable is array, VCC will NOT implicitly concat all members of the array, so use `join("")` to view arrays:
 
@@ -78,7 +78,7 @@ intraHTML(
 );
 ```
 
-## Demo04: Define a component ([source](https://github.com/rndme/react-demos/blob/master/demo04/index.html))
+## Demo04: Define a component ([source](https://github.com/rndme/react-demos/blob/master/demo04/index.html))  ([live](http://danml.com/vcc/react-demos/demo04/))
 
 `VCC()` creates a component class, which implements a render method to return an component instance of the class. You don't need to call `new` on the class in order to get an instance, just use it to define behavior of a custom HTML element.
 
@@ -102,7 +102,7 @@ Components could have attributes, and you can use `this.props.[attribute]` to ac
 
 
 
-## Demo05: this.props.children ([source](https://github.com/rndme/react-demos/blob/master/demo05/index.html))
+## Demo05: this.props.children ([source](https://github.com/rndme/react-demos/blob/master/demo05/index.html))  ([live](http://danml.com/vcc/react-demos/demo05/))
 
 VCC uses `this.children to access a component's content.
 
@@ -143,7 +143,7 @@ Please be minded that the value of `this.children` has two possibilities. If the
 
 
 
-## Demo07: Finding a DOM node ([source](https://github.com/rndme/react-demos/blob/master/demo07/index.html))
+## Demo07: Finding a DOM node ([source](https://github.com/rndme/react-demos/blob/master/demo07/index.html))  ([live](http://danml.com/vcc/react-demos/demo07/))
 
 Sometimes you need to reference a DOM node in a component. VCC gives you the `ref` attribute to find it using a callback function.
 
@@ -182,7 +182,7 @@ The referenced component will be passed in as a parameter, and the callback func
 
 
 
-## Demo08: this.state ([source](https://github.com/rndme/react-demos/blob/master/demo08/index.html))
+## Demo08: this.state ([source](https://github.com/rndme/react-demos/blob/master/demo08/index.html))  ([live](http://danml.com/vcc/react-demos/demo08/))
 
 VCC thinks of component as state machines, and uses `this.state` to hold component's state, `getInitialState()` to initialize `this.state`(invoked before a component is mounted), `this.setState()` to update `this.state` and re-render the component.
 
@@ -214,7 +214,7 @@ You could use component attributes to register event handlers, just like `on-cli
 
 
 
-## Demo09: Form ([source](https://github.com/rndme/react-demos/blob/master/demo09/index.html))
+## Demo09: Form ([source](https://github.com/rndme/react-demos/blob/master/demo09/index.html))  ([live](http://danml.com/vcc/react-demos/demo09/))
 
 According to VCC's design philosophy, `this.state` describes the state of component and is mutated via user interactions, and `this.props` describes the properties of component and is stable and immutable.
 
@@ -246,7 +246,7 @@ var Input = VCC({
 <vcc-input></vcc-input>
 ```
 
-## Demo10: Component Lifecycle ([source](https://github.com/rndme/react-demos/blob/master/demo10/index.html))
+## Demo10: Component Lifecycle ([source](https://github.com/rndme/react-demos/blob/master/demo10/index.html))  ([live](http://danml.com/vcc/react-demos/demo10/))
 
 Components have three main parts of their lifecycle: Mounting(being inserted into the DOM), Updating(being re-rendered) and Unmounting(being removed from the DOM). 
 VCC provides hooks into these lifecycle parts. `will` methods are called right before something happens, and `did` methods which are called right after something happens.
@@ -262,7 +262,7 @@ VCC provides hooks into these lifecycle parts. `will` methods are called right b
        componentDidMount: function () {
         this.timer = setInterval(function () {
           var opacity = this.state.opacity;
-          opacity -= .05;
+          opacity -= 0.05;
           if (opacity < 0.1) {
             opacity = 1.0;
           }
@@ -299,7 +299,7 @@ The following is a list of lifecycle methods.
 
 
 
-## Demo11: Ajax ([source](https://github.com/rndme/react-demos/blob/master/demo11/index.html))
+## Demo11: Ajax ([source](https://github.com/rndme/react-demos/blob/master/demo11/index.html))  ([live](http://danml.com/vcc/react-demos/demo11/))
 
 How to get the data of a component from a server or an API provider? The answer is using Ajax to fetch data in the event handler of `componentDidMount`. 
 When the server response arrives, store the data with `this.setState()` to trigger a re-render of your UI.
@@ -343,7 +343,7 @@ var UserGist = VCC({
 
 
 
-## Demo12: Display value from a Promise ([source](https://github.com/rndme/react-demos/tree/master/demo12/index.html))
+## Demo12: Display value from a Promise ([source](https://github.com/rndme/react-demos/tree/master/demo12/index.html))  ([live](http://danml.com/vcc/react-demos/demo12/))
 
 This demo is inspired by Nat Pryce's article ["Higher Order React Components"](http://natpryce.com/articles/000814.html).
 
