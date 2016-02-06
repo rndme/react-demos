@@ -14,20 +14,20 @@ Then play with the source files in the repo's demo(n) directories.
 
 Note that these demos are for [vcc.js](https://github.com/rndme/vcc), a small stand-alone view library, not React.
 
-## Index
+## Index 
 
-1. [Render HTML](#demo01-render-jsx-source)
-1. [Use JavaScript in HTML](#demo02-use-javascript-in-jsx-source)
-1. [Use array in HTML](#demo03-use-array-in-jsx-source)
-1. [Define a component](#demo04-define-a-component-source)
-1. [this.props.innerHTML](#demo05-thispropschildren-source)
+1. [Render HTML](#demo01-render-html-source-live)
+1. [Use JavaScript in HTML](#demo02-use-javascript-in-html-source-live)
+1. [Use array in HTML](#demo03-use-array-in-html-source--live)
+1. [Define a component](#demo04-define-a-component-source--live)
+1. [this.props.innerHTML](#demo05-thispropschildren-source--live)
 1. PropTypes - NA at this time
-1. [Finding a DOM node](#demo07-finding-a-dom-node-source)
-1. [this.state](#demo08-thisstate-source)
-1. [Form](#demo09-form-source)
-1. [Component Lifecycle](#demo10-component-lifecycle-source)
-1. [Ajax](#demo11-ajax-source)
-1. [Display value from a Promise](#demo12-display-value-from-a-promise-source)
+1. [Finding a DOM node](#demo07-finding-a-dom-node-source--live)
+1. [this.state](#demo08-thisstate-source--live)
+1. [Form](#demo09-form-source--live)
+1. [Component Lifecycle](#demo10-component-lifecycle-source--live)
+1. [Ajax](#demo11-ajax-source--live)
+1. [Display value from a Promise](#demo12-display-value-from-a-promise-source--live)
 
 ---
 
@@ -401,6 +401,7 @@ Now, while the promise is pending, the component displays a loading indicator. W
 ```html
    <vcc-repolist promise="$.getJSON('https://api.github.com/search/repositories?q=javascript&sort=stars')" ></vcc-repolist>
 ```
+
 
 ## Extras
 
