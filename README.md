@@ -34,7 +34,7 @@ Then play with the source files in the repo's demo(n) directories.
 The template syntax in VCC is called HTML, as in regular HTML5. Use ES6 template literals to contain pretty (un-escaped) multi-line HTML in JS files.
 If you want backwards compatibility with non-ES6 browsers, use something like babel to transform your source into ES5.
 
-note:  intraHTML is the entry way to the internal VDOM-based partial updater, used to render without definining a component.
+note:  intraHTML is the entry way to the internal VDOM-based partial updater, used to render without defining a component.
 
 ```js
 intraHTML(
