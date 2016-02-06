@@ -1,31 +1,30 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script src="../build/react.js"></script>
-    <script src="../build/react-dom.js"></script>
-    <script src="../build/browser.min.js"></script>
+    <script src="http://danml.com/js/vcc.js"></script>
   </head>
   <body>
-    <script type="text/babel">
-      var Input = React.createClass({
-        getInitialState: function() {
-          return {value: 'Hello!'};
-        },
-        handleChange: function(event) {
-          this.setState({value: event.target.value});
-        },
-        render: function () {
-          var value = this.state.value;
-          return (
-            <div>
-              <input type="text" value={value} onChange={this.handleChange} />
-              <p>{value}</p>
-            </div>
-          );
-        }
-      });
 
-      ReactDOM.render(<Input/>, document.body);
+    <vcc-input></vcc-input>
+    <script>
+	var Input = VCC({
+	  displayName: "input",
+	  getInitialState: function() {
+	    return {value: 'Hello!'};
+	  },
+	  handleChange: function(event) {
+	    this.setState({value: event.target.value});
+	  },
+	  render: function () {
+	    var value = this.state.value;
+	    return `
+	      <div>
+	        <input type="text" value=${value} on-change=this.handleChange />
+	        <p>${value}</p>
+	      </div>
+	    `;
+	  }
+	});
     </script>
   </body>
 </html>

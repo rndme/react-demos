@@ -1,46 +1,46 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script src="../build/react.js"></script>
-    <script src="../build/react-dom.js"></script>
-    <script src="../build/browser.min.js"></script>
-    <script src="../build/jquery.min.js"></script>
+    <script src="http://danml.com/js/vcc.js"></script>
+    <script src='//code.jquery.com/jquery-1.11.1.min.js'></script>
   </head>
   <body>
-    <script type="text/babel">
-var UserGist = React.createClass({
-  getInitialState: function() {
-    return {
-      username: '',
-      lastGistUrl: ''
-    };
-  },
 
-  componentDidMount: function() {
-    $.get(this.props.source, function(result) {
-      var lastGist = result[0];
-      if (this.isMounted()) {
-        this.setState({
-          username: lastGist.owner.login,
-          lastGistUrl: lastGist.html_url
-        });
-      }
-    }.bind(this));
-  },
+    <vcc-usergist source="https://api.github.com/users/octocat/gists" ></vcc-usergist>
 
-  render: function() {
-    return (
-      <div>
-        {this.state.username}'s last gist is <a href={this.state.lastGistUrl}>here</a>.
-      </div>
-    );
-  }
-});
+    <script>
 
-ReactDOM.render(
-  <UserGist source="https://api.github.com/users/octocat/gists" />,
-  document.body
-);
+	var UserGist = VCC({
+	  displayName: "usergist",
+	  getInitialState: function() {
+	    return {
+	      username: '',
+	      lastGistUrl: ''
+	    };
+	  },
+
+	  componentDidMount: function() {
+	    $.get(this.props.source, function(result) {
+	      var lastGist = result[0];
+	      if (this.isMounted()) {
+	        this.setState({
+	          username: lastGist.owner.login,
+	          lastGistUrl: lastGist.html_url
+	        });
+	      }
+	    }.bind(this));
+	  },
+
+	  render: function() {
+	    return `
+	      <div>
+	        ${this.state.username}'s last gist is
+	        <a href=${this.state.lastGistUrl}>here</a>.
+	      </div>
+	    `;
+	  }
+	});
+
     </script>
   </body>
 </html>

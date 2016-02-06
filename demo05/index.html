@@ -1,33 +1,30 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script src="../build/react.js"></script>
-    <script src="../build/react-dom.js"></script>
-    <script src="../build/browser.min.js"></script>
+    <script src="http://danml.com/js/vcc.js"></script>
   </head>
   <body>
-    <script type="text/babel">
-      var NotesList = React.createClass({
-        render: function() {
-          return (
-            <ol>
-              {
-                React.Children.map(this.props.children, function (child) {
-                  return <li>{child}</li>;
-                })
-              }
-            </ol>
-          );
-        }
-      });
 
-      ReactDOM.render(
-        <NotesList>
-          <span>hello</span>
-          <span>world</span>
-        </NotesList>,
-        document.body
-      );
+  <vcc-noteslist>
+    <span>hello</span>
+    <span>world</span>
+  </vcc-noteslist>
+
+    <script>
+	var NotesList = VCC({
+	  displayName: "noteslist",
+	  render: function() {
+	    return `
+	      <ol>
+	      ${
+	        [].map.call(this.children, function (child) {
+	          return `<li>${child.textContent}</li>`;
+	        }).join('')
+	      }
+	      </ol>
+	    `;
+	  }
+	});
     </script>
   </body>
 </html>
