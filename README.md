@@ -4,13 +4,15 @@ These demos are purposely written in a simple and clear style. You will find no 
 
 ## How to use
 
-First copy the repo into your disk.
+View online using live links, or copy the repo into your disk.
 
 ```bash
 $ git clone git@github.com:rndme/react-demos.git
 ```
 
 Then play with the source files in the repo's demo(n) directories.
+
+Note that these demos are for [vcc.js](https://github.com/rndme/vcc), a small stand-alone view library, not React.
 
 ## Index
 
