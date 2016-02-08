@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="http://danml.com/js/vcc.js"></script>
+  </head>
+  <body>
+
+   <main id=main></main>
+
+    <script>
+      var data = 123;
+
+      var MyTitle = VCC({
+	displayName: "mytitle",
+        propTypes: {
+          title:String,
+        },
+
+        render: function() {
+          return `<h1> ${this.props.title} </h1>`;
+        }
+      });
+
+	// needs to define in JS to use template expressions on the outer tag:
+     main.innerHTML= `<vcc-mytitle title="${data}" ></vcc-mytitle>`;
+    </script>
+  </body>
+</html>
