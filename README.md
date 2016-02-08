@@ -21,7 +21,7 @@ Note that these demos are for [vcc.js](https://github.com/rndme/vcc), a small st
 1. [Use array in HTML](#demo03-use-array-in-html-source--live)
 1. [Define a component](#demo04-define-a-component-source--live)
 1. [this.props.innerHTML](#demo05-thispropschildren-source--live)
-1. [PropTypes](#demo06-proptypes-source--live)
+1. [PropTypes](#demo06-proptypes-source-live)
 1. [Finding a DOM node](#demo07-finding-a-dom-node-source--live)
 1. [this.state](#demo08-thisstate-source--live)
 1. [Form](#demo09-form-source--live)
